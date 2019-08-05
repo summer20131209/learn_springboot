@@ -1,8 +1,5 @@
 # learn_springboot
 learn spring boot
-begin to learn spring boot
-test test test
-test3 test3
-hello
-
-test1242352335
+学习过程中的一些例子：
+hellotest  第一个spring boot例子
+logintest  Spring Boot的开发过程，包括Spring MVC的使用和thymeleaf的集成
