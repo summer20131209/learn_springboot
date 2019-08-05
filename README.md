@@ -6,3 +6,4 @@ logintest  --Spring Boot的开发过程，包括Spring MVC的使用和thymeleaf�
 thymeleaftest  --thymeleaf的详细使用例子  
 jsptest  --jsp使用例子  
 jsontest  --jsp使用例子 
+fileuploadtest  --文件上传例子 
