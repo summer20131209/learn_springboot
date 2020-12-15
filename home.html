@@ -60,8 +60,9 @@
         var tip = document.getElementById('weixin-tip');
         var close = document.getElementById('close');
         if(is_weixin){
+		    alert("is weixin");
             btn.onclick = function(e){
-			    alert("is weixin");
+			
                 tip.style.height = winHeight + 'px';
                 tip.style.display = 'block';
                 return false;
