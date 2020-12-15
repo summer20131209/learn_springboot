@@ -44,7 +44,7 @@
             <p class="entry-con">注：微信用户请在右上角选择“在浏览器中打开”，再选择下载应用</p>
         </div>
     </div>
-    <div id="weixin-tip"><p><img src="img/android-btn.png" alt="微信打开"/><span id="close" title="关闭" class="close">×</span></p></div>
+    <div id="weixin-tip"><p><img src="img/live_weixin" alt="微信打开"/><span id="close" title="关闭" class="close">×</span></p></div>
     <script type="text/javascript">
     var is_weixin = (function() {
         var ua = navigator.userAgent.toLowerCase();
@@ -59,20 +59,31 @@
         var btn = document.getElementById('J_weixin');
         var tip = document.getElementById('weixin-tip');
         var close = document.getElementById('close');
+		
+		var u = navigator.userAgent, app = navigator.appVersion;
+            var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1;
+            var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+            // 这里是安卓浏览器
+            if (isAndroid) {
+                window.location.href = 'https://summer20131209.github.io/learn_springboot/ZafulAndroid.apk'; // 跳安卓端下载地址
+            }
+            // 这里是iOS浏览器
+            if (isIOS) {
+                window.location.href = 'https://itunes.apple.com/cn/app/id1299542018'; // 跳AppStore下载地址
+            }
+			
         if(is_weixin){
-		    alert("is weixin");
-            btn.onclick = function(e){
+		   // alert("is weixin");
+           //  btn.onclick = function(e){
 			
                 tip.style.height = winHeight + 'px';
                 tip.style.display = 'block';
-                return false;
-            }
-            close.onclick = function(){
-                tip.style.display = 'none';
-            }
-        }else {
-			
-		}
+               //  return false;
+            // }
+            // close.onclick = function(){
+           //      tip.style.display = 'none';
+           //  }
+        }
     }
     </script>
 </body>
