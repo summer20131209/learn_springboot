@@ -64,11 +64,13 @@
 			var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1;
             var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
 			if(isAndroid){
+						alert("android");
                 tip.style.height = winHeight + 'px';
                 tip.style.display = 'block';
                 return false;}
 				
 				if(isIOS){
+				alert("ios");
 					                window.location.href = 'https://itunes.apple.com/cn/app/id1299542018'; // 跳AppStore下载地址
 									return false;
 				}
