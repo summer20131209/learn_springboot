@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>无忧装修app下载</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .download {
+            color: #4D4D4D;
+            padding: 7.2% 5% 9.3%;
+        }
+
+        .download .entry-hd {
+            font-size: 2.4em;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .download-btn {
+            text-align: center;
+        }
+        .download-btn a {
+            display: block; margin-top: 20px; background-color: #2d2d2d; color: #fff;
+            height: 40px; line-height: 40px; text-align: center; border-radius: 4px;
+        }
+
+        .footer-bg {
+            display: none;
+            background: #2D2D2D;
+            color: #E4E4E4;
+            padding: 3.4% 2%;
+            margin: 0 5%;
+            text-align: center;
+        }
+
+        .footer-bg .entry-con {
+            font-size: 1em;
+        }
+
+        #weixin-tip {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            background: rgba(0, 0, 0, 0.8);
+            filter: alpha(opacity=80);
+            width: 100%;
+            height: 100%;
+            z-index: 100;
+        }
+
+        #weixin-tip p {
+            text-align: center;
+            margin-top: 10%;
+            padding: 0 5%;
+            position: relative;
+        }
+
+        #weixin-tip .close {
+            color: #fff;
+            padding: 5px;
+            font: bold 20px/20px simsun;
+            text-shadow: 0 1px 0 #ddd;
+            position: absolute;
+            top: 0;
+            left: 5%;
+        }
+    </style>
+</head>
+
+<body class="success">
+    <div class="page-wrap">
+        <div class="download">
+            <h3 class="entry-hd">
+            </h3>
+            <div class="download-btn">
+                <a href="https://summer20131209.github.io/learn_springboot/ZafulAndroid.apk">Android</a>
+                <a href="https://itunes.apple.com/cn/app/id1299542018">IOS</a>
+            </div>
+        </div>
+        <div class="footer-bg">
+            <p class="entry-con">注：微信用户请在右上角选择“在浏览器中打开”，再选择下载应用</p>
+        </div>
+    </div>
+    <div id="weixin-tip">
+        <p><img src="img/live_weixin.png" alt="微信打开" /><span id="close" title="关闭" class="close">×</span></p>
+    </div>
+    <script type="text/javascript">
+        var is_weixin = (function () {
+            var ua = navigator.userAgent.toLowerCase();
+            if (ua.match(/MicroMessenger/i) == "micromessenger") {
+                return true;
+            } else {
+                return false;
+            }
+        })();
+        is_weixin && document.addEventListener('DOMContentLoaded', function () {
+            document.querySelector('#weixin-tip').style.display = 'block';
+            document.querySelector('.footer-bg').style.display = 'block';
+            
+            var btn = document.querySelector('.entry-con');
+            var tip = document.getElementById('weixin-tip');
+            var close = document.getElementById('close');
+
+            if (is_weixin) {
+                btn.onclick = function(e){
+                    tip.style.display = 'block';
+                }
+                close.onclick = function () {
+                    tip.style.display = 'none';
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
