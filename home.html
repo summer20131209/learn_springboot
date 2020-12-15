@@ -60,17 +60,17 @@
         var tip = document.getElementById('weixin-tip');
         var close = document.getElementById('close');
 		
-		var u = navigator.userAgent, app = navigator.appVersion;
-            var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1;
-            var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+		//var u = navigator.userAgent, app = navigator.appVersion;
+        //    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1;
+         //   var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
             // 这里是安卓浏览器
-            if (isAndroid) {
-                window.location.href = 'https://summer20131209.github.io/learn_springboot/ZafulAndroid.apk'; // 跳安卓端下载地址
-            }
+         //   if (isAndroid) {
+         //       window.location.href = 'https://summer20131209.github.io/learn_springboot/ZafulAndroid.apk'; // 跳安卓端下载地址
+         //   }
             // 这里是iOS浏览器
-            if (isIOS) {
-                //window.location.href = 'https://itunes.apple.com/cn/app/id1299542018'; // 跳AppStore下载地址
-            }
+         //   if (isIOS) {
+         //       //window.location.href = 'https://itunes.apple.com/cn/app/id1299542018'; // 跳AppStore下载地址
+          //  }
 			
         if(is_weixin){
 		   // alert("is weixin");
