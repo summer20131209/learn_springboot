@@ -61,24 +61,17 @@
         var close = document.getElementById('close');
         if(is_weixin){
             btn.onclick = function(e){
-			var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1;
-            var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
-			if(isAndroid){
-						alert("android");
+			    alert("is weixin");
                 tip.style.height = winHeight + 'px';
                 tip.style.display = 'block';
-                return false;}
-				
-				if(isIOS){
-				alert("ios");
-					                window.location.href = 'https://itunes.apple.com/cn/app/id1299542018'; // 跳AppStore下载地址
-									return false;
-				}
+                return false;
             }
             close.onclick = function(){
                 tip.style.display = 'none';
             }
-        }
+        }else {
+			
+		}
     }
     </script>
 </body>
